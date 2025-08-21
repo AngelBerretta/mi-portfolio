@@ -1,9 +1,10 @@
 {
   "name": "mi-portfolio",
   "version": "0.1.0",
+  "description": "Portfolio personal de Angel Berretta - Desarrollador Web Full Stack",
   "private": true,
+  "homepage": "https://angelberretta.github.io/mi-portfolio",
   "dependencies": {
-    "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.7.0",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
@@ -16,7 +17,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -35,5 +38,24 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  },
+  "keywords": [
+    "portfolio",
+    "react",
+    "web-developer",
+    "frontend",
+    "argentina"
+  ],
+  "author": "Angel Berretta",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AngelBerretta/mi-portfolio"
+  },
+  "bugs": {
+    "url": "https://github.com/AngelBerretta/mi-portfolio/issues"
   }
 }
