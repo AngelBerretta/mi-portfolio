@@ -24,41 +24,57 @@ const Typewriter = ({
   const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
-    let timer: NodeJS.Timeout;
-    
+    let timer: number;
+
     if (!isPaused) {
       const currentFullText = texts[currentTextIndex];
-      
+
       if (!isDeleting && currentText === currentFullText) {
         // Pausa al completar escritura
-        timer = setTimeout(() => {
+        timer = window.setTimeout(() => {
           setIsPaused(false);
           setIsDeleting(true);
         }, delay);
         setIsPaused(true);
+
       } else if (isDeleting && currentText === '') {
         // Pasa al siguiente texto
         setIsDeleting(false);
-        setCurrentTextIndex((prev) => (prev + 1) % texts.length);
+
+        setCurrentTextIndex((prev) => {
+          if (!infinite && prev === texts.length - 1) {
+            return prev; // se detiene en el último texto
+          }
+          return (prev + 1) % texts.length;
+        });
+
       } else {
         // Escribe o borra caracteres
-        timer = setTimeout(() => {
-          setCurrentText((prev) => {
-            if (isDeleting) {
-              return prev.substring(0, prev.length - 1);
-            } else {
-              return currentFullText.substring(0, prev.length + 1);
-            }
-          });
+        timer = window.setTimeout(() => {
+          setCurrentText((prev) =>
+            isDeleting
+              ? prev.substring(0, prev.length - 1)
+              : currentFullText.substring(0, prev.length + 1)
+          );
         }, isDeleting ? deleteSpeed : speed);
       }
     }
 
-    return () => clearTimeout(timer);
-  }, [currentText, currentTextIndex, isDeleting, isPaused, texts, speed, deleteSpeed, delay]);
+    return () => window.clearTimeout(timer);
+  }, [
+    currentText,
+    currentTextIndex,
+    isDeleting,
+    isPaused,
+    texts,
+    speed,
+    deleteSpeed,
+    delay,
+    infinite
+  ]);
 
   return (
-    <span className={`inline-block ${className}`}>
+    <span className={`inline-block ${className ?? ''}`}>
       {currentText}
       <motion.span
         animate={{ opacity: [1, 0] }}
