@@ -103,15 +103,16 @@ const Hero = () => {
               Ver proyectos <i className="fas fa-arrow-right text-xs"></i>
             </motion.a>
             
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-transparent border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-surface-hover text-gray-900 dark:text-white font-medium transition-all flex items-center justify-center gap-2"
-              href="/cv-angel-berretta.pdf"
-              download="CV_Angel_Berretta.pdf"
-            >
-              Descargar CV <i className="fas fa-download text-xs"></i>
-            </motion.a>
+<motion.a
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-transparent border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-surface-hover text-gray-900 dark:text-white font-medium transition-all flex items-center justify-center gap-2"
+  href={`${import.meta.env.BASE_URL}cv-angel-berretta.pdf`}
+  download="CV_Angel_Berretta.pdf"
+>
+  Descargar CV <i className="fas fa-download text-xs"></i>
+</motion.a>
+
           </div>
         </FadeIn>
         
