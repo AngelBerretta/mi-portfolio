@@ -3,7 +3,6 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/mi-portfolio/', // 👈 MUY IMPORTANTE
   build: {
     rollupOptions: {
       output: {
@@ -18,3 +17,4 @@ export default defineConfig({
     open: true,
   },
 });
+
