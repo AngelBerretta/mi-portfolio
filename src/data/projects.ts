@@ -6,7 +6,7 @@ import pawcare from '../assets/projects/pawcare.jpg';
 import appweather from '../assets/projects/appweather.jpg';
 import shopfast from '../assets/projects/shopfast.jpg';
 import terracart from '../assets/projects/terracart.jpg';
-// import dashboard from '../assets/projects/ecommerce-dashboard.jpg';
+import dashboard from '../assets/projects/ecommerce-dashboard.jpg';
 
 
 export const projects: Project[] = [
@@ -72,14 +72,14 @@ export const projects: Project[] = [
     tags: ["HTML", "CSS", "JavaScript", "LocalStorage"],
     codeUrl: "https://github.com/AngelBerretta/TerraCart",
     demoUrl: "https://terracart.netlify.app/"
+  },
+  {
+    id: 8,
+    title: "E-commerce Dashboard",
+    description: "Panel de administración moderno para ecommerce...",
+    image: dashboard,
+    tags: ["React", "TypeScript", "Tailwind"],
+    codeUrl: "https://github.com/AngelBerretta/ForShop",
+    demoUrl: "https://forshop.netlify.app/"
   }
-//   {
-//     id: 8,
-//     title: "E-commerce Dashboard",
-//     description: "Panel de administración completo...",
-//     image: dashboard,
-//     tags: ["React", "TypeScript", "Tailwind"],
-//     codeUrl: "#",
-//     demoUrl: "#"
-//   }
 ];
