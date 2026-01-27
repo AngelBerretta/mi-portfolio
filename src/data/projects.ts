@@ -6,7 +6,7 @@ import pawcare from '../assets/projects/pawcare.jpg';
 import appweather from '../assets/projects/appweather.jpg';
 import shopfast from '../assets/projects/shopfast.jpg';
 import terracart from '../assets/projects/terracart.jpg';
-import dashboard from '../assets/projects/ecommerce-dashboard.jpg';
+import dashboard from '../assets/projects/dashboard.jpg';
 
 
 export const projects: Project[] = [
