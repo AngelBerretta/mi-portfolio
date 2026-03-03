@@ -84,5 +84,12 @@ export const skills: Skill[] = [
     description: "Herramienta de construcción moderna y rápida",
     icon: "fas fa-bolt",
     color: "yellow"
+  },
+  {
+    id: 13,
+    name: "Firebase",
+    description: "Backend as a Service con Firestore, autenticación y hosting",
+    icon: "fas fa-fire",
+    color: "orange"
   }
 ];
